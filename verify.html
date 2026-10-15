@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Verification — Havoc Party: Knockout Arena</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  </head>
+  <body>
+    <div class="verify-box">
+      <img src="icon.png" alt="" width="80" height="80" style="border-radius:20px;margin-bottom:16px" />
+      <h2>Prove you're not a bot</h2>
+      <p>Havoc Party: Knockout Arena — quick human check before matchmaking.</p>
+      <div
+        class="cf-turnstile"
+        data-sitekey="0x4AAAAAAFXOt1G-VY4_Tvwv"
+        data-callback="onVerify"
+        data-theme="dark"></div>
+      <div id="status"></div>
+    </div>
+    <script>
+      // Browser builds can open this page directly for verification; the
+      // verified token is posted back to the game server for a session ticket.
+      const API = 'https://brawl-havoc-mp-production.up.railway.app';
+      async function onVerify(token) {
+        const el = document.getElementById('status');
+        el.className = '';
+        el.textContent = 'Verifying…';
+        try {
+          const r = await fetch(API + '/verify', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({token}),
+          });
+          const j = await r.json();
+          if (!r.ok || !j.ok) throw new Error(j.error || 'failed');
+          el.className = 'ok';
+          el.textContent = 'Verified — you can return to the game.';
+          window.__havocTicket = j.ticket;
+        } catch (e) {
+          el.className = 'err';
+          el.textContent = 'Verification failed — please try again.';
+        }
+      }
+    </script>
+  </body>
+</html>
