@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terms of Service — Havoc Party: Knockout Arena</title>
+    <title>Terms of Service | Havoc Party: Knockout Arena</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -13,13 +13,14 @@
         <div><h1>HAVOC PARTY</h1><span>Knockout Arena</span></div>
       </div>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="disclaimer.html">Disclaimer</a>
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+        <a href="disclaimer.html" data-i18n="nav_disclaimer">Disclaimer</a>
       </nav>
     </header>
     <main class="doc">
       <h1>Terms of Service</h1>
+      <p class="small" data-i18n="doc_note" style="color:#b3aee0;font-size:13px;margin-bottom:8px">This document is provided in English; translations may follow.</p>
       <p class="updated">Last updated: <span id="d"></span></p>
 
       <p>
@@ -49,7 +50,7 @@
       <ul>
         <li>Use cheats, mods, bots, injection tools, or any software that interferes with the Game or other players' experience.</li>
         <li>Attempt to decompile, instrument, or tamper with the Game (including via debuggers or dynamic-instrumentation frameworks).</li>
-        <li>Attack, disrupt, or abuse the Game's servers — including denial-of-service activity or automated room creation.</li>
+        <li>Attack, disrupt, or abuse the Game's servers | including denial-of-service activity or automated room creation.</li>
         <li>Use offensive, hateful, or harassing names or conduct in multiplayer.</li>
         <li>Exploit bugs for advantage instead of reporting them.</li>
       </ul>
@@ -109,5 +110,6 @@
     <script>
       document.getElementById('d').textContent = new Date().toISOString().slice(0, 10);
     </script>
+  <script src="lang.js"></script>
   </body>
 </html>
