@@ -12,8 +12,8 @@
   <body>
     <div class="verify-box">
       <img src="icon.png" alt="" width="80" height="80" style="border-radius:20px;margin-bottom:16px" />
-      <h2>Prove you're not a bot</h2>
-      <p>Havoc Party: Knockout Arena | quick human check before matchmaking.</p>
+      <h2 data-i18n="vf_t">Prove you're not a bot</h2>
+      <p data-i18n="vf_p">Havoc Party: Knockout Arena | quick human check before matchmaking.</p>
       <div
         class="cf-turnstile"
         data-sitekey="0x4AAAAAAFXOt1G-VY4_Tvwv"
@@ -28,7 +28,7 @@
       async function onVerify(token) {
         const el = document.getElementById('status');
         el.className = '';
-        el.textContent = 'Verifying…';
+        el.textContent = (window.hpT && window.hpT('vf_wait')) || 'Verifying…';
         try {
           const r = await fetch(API + '/verify', {
             method: 'POST',
@@ -38,11 +38,11 @@
           const j = await r.json();
           if (!r.ok || !j.ok) throw new Error(j.error || 'failed');
           el.className = 'ok';
-          el.textContent = 'Verified | you can return to the game.';
+          el.textContent = (window.hpT && window.hpT('vf_ok')) || 'Verified | you can return to the game.';
           window.__havocTicket = j.ticket;
         } catch (e) {
           el.className = 'err';
-          el.textContent = 'Verification failed | please try again.';
+          el.textContent = (window.hpT && window.hpT('vf_err')) || 'Verification failed | please try again.';
         }
       }
     </script>
