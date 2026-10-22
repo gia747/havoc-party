@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Havoc Party — Human Check</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #020617; /* slate-950 — matches the app's verify screen */
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #box {
+        width: 100%;
+        min-height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <script>
+      // Turnstile bridge for the Capacitor iOS app. WKWebView serves the app
+      // from capacitor://localhost, and Cloudflare's challenge iframe cannot
+      // perform cross-scheme frame access (widget error 600010). Hosted on
+      // https here, the widget runs normally; results are postMessage'd up to
+      // the app, which exchanges the token at /verify exactly like the
+      // in-app widget path does.
+      var emit = function (ev, extra) {
+        try {
+          parent.postMessage(
+            Object.assign({type: 'bh-ts', event: ev}, extra || {}),
+            '*',
+          );
+        } catch (e) {}
+      };
+      var widgetId = null;
+      // Parent (the app) can ask us to reset the widget after its backend
+      // rejects a token — same behavior as the in-app turnstile.reset().
+      window.addEventListener('message', function (e) {
+        var d = e.data || {};
+        if (d.type !== 'bh-ts-cmd' || d.cmd !== 'reset') return;
+        if (window.turnstile && widgetId != null) {
+          try {
+            window.turnstile.reset(widgetId);
+          } catch (err) {}
+        }
+      });
+      window.tsOnload = function () {
+        emit('ready');
+        widgetId = turnstile.render('#box', {
+          sitekey: '0x4AAAAAAFXOt1G-VY4_Tvwv',
+          theme: 'dark',
+          size: 'flexible',
+          appearance: 'interaction-only',
+          'refresh-expired': 'auto',
+          'refresh-timeout': 'auto',
+          'before-interactive-callback': function () {
+            emit('interactive');
+          },
+          'unsupported-callback': function () {
+            emit('error', {code: 'unsupported'});
+          },
+          'error-callback': function (code) {
+            emit('error', {code: String(code || '')});
+          },
+          'expired-callback': function () {
+            emit('expired');
+          },
+          'timeout-callback': function () {
+            emit('timeout');
+          },
+          callback: function (token) {
+            emit('token', {token: token});
+          },
+        });
+      };
+    </script>
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=tsOnload&render=explicit"
+      async
+      defer></script>
+  </body>
+</html>
