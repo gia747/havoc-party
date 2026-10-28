@@ -20,7 +20,7 @@
   const T = {
     en: {
       nav_home: 'Home', nav_terms: 'Terms', nav_privacy: 'Privacy', nav_disclaimer: 'Disclaimer',
-      dl_get: 'Download for', dl_soon: 'SOON', dl_avail: 'AVAILABLE',
+      dl_get: 'Download for', dl_soon: 'SOON', dl_avail: 'AVAILABLE', dl_beta: 'CLOSED TEST',
       hero_h2: 'Chaos you can laugh at.<br />Physics you can blame.',
       hero_p: 'A physics-driven party brawler from <strong>SheGoz Technologies</strong>. Grab your friends, pick a fighter, and survive 12 hazard-packed arenas — races, brawls, ball stadiums and worse.',
       f1h: '12 Arenas', f1p: 'Sky cranes, clock rotors, shark reefs, volcanos, fan factories — each with hazards that can end your run in one bad step.',
@@ -31,7 +31,7 @@
     },
     ar: {
       nav_home: 'الرئيسية', nav_terms: 'الشروط', nav_privacy: 'الخصوصية', nav_disclaimer: 'إخلاء المسؤولية',
-      dl_get: 'تنزيل لنظام', dl_soon: 'قريبًا', dl_avail: 'متوفر',
+      dl_get: 'تنزيل لنظام', dl_soon: 'قريبًا', dl_avail: 'متوفر', dl_beta: 'اختبار مغلق',
       hero_h2: 'فوضى تضحك منها.<br />وفيزياء تلقي اللوم عليها.',
       hero_p: 'لعبة قتال جماعية بفيزياء حركة من <strong>SheGoz Technologies</strong>. اجمع أصدقاءك، اختر مقاتلك، وانجُ في 12 ساحة مليئة بالمخاطر — سباقات ومعارك وملاعب كرة وما هو أسوأ.',
       f1h: '12 ساحة', f1p: 'رافعات سماء ودوّارات ساعة وشعاب أسماك قرش وبراكين ومصانع مراوح — كل واحدة بمخاطر تنهي جولتك بخطوة خاطئة.',
@@ -42,7 +42,7 @@
     },
     fr: {
       nav_home: 'Accueil', nav_terms: 'Conditions', nav_privacy: 'Confidentialité', nav_disclaimer: 'Avertissement',
-      dl_get: 'Télécharger pour', dl_soon: 'BIENTÔT', dl_avail: 'DISPONIBLE',
+      dl_get: 'Télécharger pour', dl_soon: 'BIENTÔT', dl_avail: 'DISPONIBLE', dl_beta: 'TEST FERMÉ',
       hero_h2: 'Un chaos hilarant.<br />Une physique coupable.',
       hero_p: 'Un party-brawler physique de <strong>SheGoz Technologies</strong>. Rassemblez vos amis, choisissez un combattant et survivez à 12 arènes pleines de pièges.',
       f1h: '12 arènes', f1p: 'Grues, rotors d\'horloge, récifs à requins, volcans, usines de ventilateurs — chaque danger peut finir votre partie.',
@@ -53,7 +53,7 @@
     },
     de: {
       nav_home: 'Start', nav_terms: 'AGB', nav_privacy: 'Datenschutz', nav_disclaimer: 'Hinweis',
-      dl_get: 'Herunterladen für', dl_soon: 'BALD', dl_avail: 'VERFÜGBAR',
+      dl_get: 'Herunterladen für', dl_soon: 'BALD', dl_avail: 'VERFÜGBAR', dl_beta: 'GESCHLOSSENER TEST',
       hero_h2: 'Chaos zum Lachen.<br />Physik zum Schuldgeben.',
       hero_p: 'Ein physikgetriebener Party-Brawler von <strong>SheGoz Technologies</strong>. Schnapp dir deine Freunde, wähle einen Kämpfer und überlebe 12 Arenen voller Gefahren.',
       f1h: '12 Arenen', f1p: 'Baukräne, Uhrrotoren, Haifischriffe, Vulkane, Ventilatorfabriken — jede Gefahr kann deinen Lauf beenden.',
@@ -64,7 +64,7 @@
     },
     nl: {
       nav_home: 'Home', nav_terms: 'Voorwaarden', nav_privacy: 'Privacy', nav_disclaimer: 'Disclaimer',
-      dl_get: 'Downloaden voor', dl_soon: 'BINNENKORT', dl_avail: 'BESCHIKBAAR',
+      dl_get: 'Downloaden voor', dl_soon: 'BINNENKORT', dl_avail: 'BESCHIKBAAR', dl_beta: 'GESLOTEN TEST',
       hero_h2: 'Chaos om om te lachen.<br />Fysica om de schuld te geven.',
       hero_p: 'Een physics-gedreven party-brawler van <strong>SheGoz Technologies</strong>. Verzamel je vrienden, kies een vechter en overleef 12 arena\'s vol gevaren.',
       f1h: '12 arena\'s', f1p: 'Hijskranen, klokrotoren, haaienriffen, vulkanen, ventilatorfabrieken — elk gevaar kan je run eindigen.',
@@ -75,7 +75,7 @@
     },
     ru: {
       nav_home: 'Главная', nav_terms: 'Условия', nav_privacy: 'Конфиденциальность', nav_disclaimer: 'Отказ от ответственности',
-      dl_get: 'Скачать для', dl_soon: 'СКОРО', dl_avail: 'ДОСТУПНО',
+      dl_get: 'Скачать для', dl_soon: 'СКОРО', dl_avail: 'ДОСТУПНО', dl_beta: 'ЗАКРЫТЫЙ ТЕСТ',
       hero_h2: 'Хаос, над которым смеёшься.<br />Физика, которую винишь.',
       hero_p: 'Физический party-бrawler от <strong>SheGoz Technologies</strong>. Собирай друзей, выбирай бойца и выживи в 12 аренах, полных опасностей.',
       f1h: '12 арен', f1p: 'Небесные краны, часовые роторы, акульи рифы, вулканы, фабрики вентиляторов — любая опасность может закончить забег.',
@@ -86,7 +86,7 @@
     },
     zh: {
       nav_home: '首页', nav_terms: '条款', nav_privacy: '隐私', nav_disclaimer: '免责声明',
-      dl_get: '下载', dl_soon: '即将推出', dl_avail: '现已推出',
+      dl_get: '下载', dl_soon: '即将推出', dl_avail: '现已推出', dl_beta: '封闭测试',
       hero_h2: '让你笑出声的混乱。<br />让你甩锅的物理引擎。',
       hero_p: '<strong>SheGoz Technologies</strong> 出品的物理派对乱斗游戏。叫上好友，选择战士，在12个危机四伏的竞技场中生存下来。',
       f1h: '12个竞技场', f1p: '空中吊机、钟表转子、鲨鱼礁、火山、风扇工厂——每个危险都可能终结你的比赛。',
@@ -97,7 +97,7 @@
     },
     ja: {
       nav_home: 'ホーム', nav_terms: '利用規約', nav_privacy: 'プライバシー', nav_disclaimer: '免責事項',
-      dl_get: 'ダウンロード', dl_soon: '近日公開', dl_avail: '配信中',
+      dl_get: 'ダウンロード', dl_soon: '近日公開', dl_avail: '配信中', dl_beta: 'クローズドテスト',
       hero_h2: '笑えるカオス。<br />物理エンジンのせいにしよう。',
       hero_p: '<strong>SheGoz Technologies</strong> が贈る物理パーティーブロウラー。友達と集まってファイターを選び、危険だらけの12のアリーナを生き残ろう。',
       f1h: '12のアリーナ', f1p: 'スカイクレーン、時計ローター、サメの礁、火山、ファン工場——どの危険も一歩でランを終わらせる。',
@@ -108,7 +108,7 @@
     },
     ko: {
       nav_home: '홈', nav_terms: '이용약관', nav_privacy: '개인정보', nav_disclaimer: '면책조항',
-      dl_get: '다운로드', dl_soon: '출시 예정', dl_avail: '이용 가능',
+      dl_get: '다운로드', dl_soon: '출시 예정', dl_avail: '이용 가능', dl_beta: '비공개 테스트',
       hero_h2: '웃길 수밖에 없는 혼돈.<br />물리엔진 탓을 하세요.',
       hero_p: '<strong>SheGoz Technologies</strong>의 물리 파티 브롤러. 친구와 함께 파이터를 고르고 위험 가득한 12개 아레나에서 살아남으세요.',
       f1h: '12개 아레나', f1p: '스카이 크레인, 시계 로터, 상어 암초, 화산, 팬 공장 — 모든 위험이 한 번에 당신의 런을 끝낼 수 있습니다.',
@@ -119,7 +119,7 @@
     },
     ms: {
       nav_home: 'Utama', nav_terms: 'Terma', nav_privacy: 'Privasi', nav_disclaimer: 'Penafian',
-      dl_get: 'Muat turun untuk', dl_soon: 'SEGERA', dl_avail: 'TERSEDIA',
+      dl_get: 'Muat turun untuk', dl_soon: 'SEGERA', dl_avail: 'TERSEDIA', dl_beta: 'UJIAN TERTUTUP',
       hero_h2: 'Kekacauan yang melucukan.<br />Fizik yang boleh dipersalahkan.',
       hero_p: 'Party-brawler berasaskan fizik daripada <strong>SheGoz Technologies</strong>. Ajak kawan, pilih pejuang, dan survive di 12 arena penuh bahaya.',
       f1h: '12 arena', f1p: 'Kren langit, rotor jam, terumbu jerung, gunung berapi, kilang kipas — setiap bahaya boleh tamatkan larian anda.',
@@ -130,7 +130,7 @@
     },
     id: {
       nav_home: 'Beranda', nav_terms: 'Ketentuan', nav_privacy: 'Privasi', nav_disclaimer: 'Sanggahan',
-      dl_get: 'Unduh untuk', dl_soon: 'SEGERA', dl_avail: 'TERSEDIA',
+      dl_get: 'Unduh untuk', dl_soon: 'SEGERA', dl_avail: 'TERSEDIA', dl_beta: 'UJI COBA TERTUTUP',
       hero_h2: 'Kekacauan yang bikin ngakak.<br />Fisika yang bisa disalahkan.',
       hero_p: 'Party-brawler berbasis fisika dari <strong>SheGoz Technologies</strong>. Ajak teman, pilih petarung, dan bertahan di 12 arena penuh bahaya.',
       f1h: '12 arena', f1p: 'Derek langit, rotor jam, karang hiu, gunung berapi, pabrik kipas — setiap bahaya bisa mengakhiri larimu.',
@@ -141,7 +141,7 @@
     },
     vi: {
       nav_home: 'Trang chủ', nav_terms: 'Điều khoản', nav_privacy: 'Bảo mật', nav_disclaimer: 'Miễn trừ',
-      dl_get: 'Tải xuống cho', dl_soon: 'SẮP CÓ', dl_avail: 'ĐÃ CÓ',
+      dl_get: 'Tải xuống cho', dl_soon: 'SẮP CÓ', dl_avail: 'ĐÃ CÓ', dl_beta: 'THỬ NGHIỆM KÍN',
       hero_h2: 'Hỗn loạn cười chảy nước mắt.<br />Đổ lỗi cho vật lý.',
       hero_p: 'Game đấu trường vật lý dạo tiệc từ <strong>SheGoz Technologies</strong>. Rủ bạn bè, chọn đấu sĩ, sống sót qua 12 đấu trường đầy nguy hiểm.',
       f1h: '12 đấu trường', f1p: 'Cẩu trời, rotor đồng hồ, rạn cá mập, núi lửa, nhà máy quạt — mỗi mối nguy đều có thể kết thúc ván của bạn.',
